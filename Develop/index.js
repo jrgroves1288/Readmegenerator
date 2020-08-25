@@ -1,11 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
-const generateMarkdown = require('utils/generateMarkdown.js')
 
-const writeToFile = (fileName, data) => {
-  fs.writeFile(fileName + '.md', data, error => error ? console.error(error) : console.log(`${fileName + '.md'} generated!`))
-}
-writeToFile(rmObject.title, await generateMarkdown(rmObject))
 
 inquirer.prompt
         ([
@@ -45,6 +40,14 @@ inquirer.prompt
             name: 'qs',
             message: 'Any questions?'
           }
-        ])
+        ]).then(answer)
+        fs.writeFile("readme.md", , function(err) {
+
+          if (err) {
+            return console.log(err);
+          }
         
-      
+          console.log("Success!");
+        
+        });
+        
