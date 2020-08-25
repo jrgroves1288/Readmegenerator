@@ -5,6 +5,7 @@ const generateMarkdown = require('utils/generateMarkdown.js')
 const writeToFile = (fileName, data) => {
   fs.writeFile(fileName + '.md', data, error => error ? console.error(error) : console.log(`${fileName + '.md'} generated!`))
 }
+writeToFile(rmObject.title, await generateMarkdown(rmObject))
 
 inquirer.prompt
         ([
@@ -45,6 +46,5 @@ inquirer.prompt
             message: 'Any questions?'
           }
         ])
-        writeToFile(rmObject.title, await generateMarkdown(rmObject))
+        
       
-      init()
