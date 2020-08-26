@@ -6,28 +6,28 @@ inquirer.prompt
         ([
             {
               type: 'input',
-              name: 'rmUser',
+              name: 'Username',
               message: 'What is your GitHub user name?'
             },
             {
               type: 'input',
-              name: 'rmRepo',
+              name: 'Repository',
               message: 'What is your repository name?'
             },
           {
             type: 'input',
-            name: 'inst',
+            name: 'instructions',
             message: 'What are the installation instructions?'
           },
           {
             type: 'input',
-            name: 'use',
+            name: 'description',
             message: 'What is the usage description?'
           },
         
           {
             type: 'input',
-            name: 'con',
+            name: 'contribute',
             message: 'Who are the contributors?'
           },
           {
@@ -37,7 +37,7 @@ inquirer.prompt
           },
           {
             type: 'input',
-            name: 'qs',
+            name: 'questions',
             message: 'Any questions?'
           }
         ]).then(answer)
